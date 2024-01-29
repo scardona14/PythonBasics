@@ -1,12 +1,8 @@
 import random
 
-#Create the list
-flipList = []
+# Genarate a random list with randit between 1 and 1000
+# Use range to genarate 100 values
+randList = list(random.randint(1, 1001) for i in range(100))
 
-# Populate the list with 100 Hs Ts
-for i in range(1, 101):
-    flipList += random.choice(['H', 'T'])
-
-# Output the results
-print("Heads :", flipList.count('H'))
-print("Tails :", flipList.count('T'))
+# Use modulus to find multiples of 9
+print(list(filter((lambda x: x % 9 == 0), randList)))
